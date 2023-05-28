@@ -1,0 +1,21 @@
+@import "./variables";
+
+.container-status-mobile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bgPage;
+    svg {
+        height: 100px;
+        width: 60px;
+        filter: $primaryFilter;
+    }
+    h1 {
+        @include primary-bold-detail-text;
+        color: $primary;
+    }
+}

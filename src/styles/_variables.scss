@@ -1,0 +1,332 @@
+/* color */
+$black: #000000;
+$white: #ffffff;
+
+$gray: #7d7d7d;
+$purple: #4e3db4;
+$bgFilter: #16121f;
+
+$error: #f44336;
+
+$bgDark: #013468;
+$bgPage: #f5f4f4;
+$bgCover: #f3f4f6;
+$bgHeder: #34495e;
+
+$primary: #e3b980;
+$primaryShadow: #bc8125;
+$primaryFilter: brightness(0) saturate(100%) invert(76%) sepia(16%) saturate(793%) hue-rotate(355deg) brightness(95%)
+    contrast(97%);
+
+$primary100: rgba(
+    $color: $primary,
+    $alpha: 0.1,
+);
+$primary200: rgba(
+    $color: $primary,
+    $alpha: 0.2,
+);
+$primary300: rgba(
+    $color: $primary,
+    $alpha: 0.3,
+);
+$primary400: rgba(
+    $color: $primary,
+    $alpha: 0.4,
+);
+$primary500: rgba(
+    $color: $primary,
+    $alpha: 0.5,
+);
+$primary600: rgba(
+    $color: $primary,
+    $alpha: 0.6,
+);
+$primary700: rgba(
+    $color: $primary,
+    $alpha: 0.7,
+);
+$primary800: rgba(
+    $color: $primary,
+    $alpha: 0.8,
+);
+$primary900: rgba(
+    $color: $primary,
+    $alpha: 0.9,
+);
+
+$white100: rgba(
+    $color: $white,
+    $alpha: 0.1,
+);
+$white200: rgba(
+    $color: $white,
+    $alpha: 0.2,
+);
+$white300: rgba(
+    $color: $white,
+    $alpha: 0.3,
+);
+$white400: rgba(
+    $color: $white,
+    $alpha: 0.4,
+);
+$white500: rgba(
+    $color: $white,
+    $alpha: 0.5,
+);
+$white600: rgba(
+    $color: $white,
+    $alpha: 0.6,
+);
+$white700: rgba(
+    $color: $white,
+    $alpha: 0.7,
+);
+$white800: rgba(
+    $color: $white,
+    $alpha: 0.8,
+);
+$white900: rgba(
+    $color: $white,
+    $alpha: 0.9,
+);
+
+$bgMint: radial-gradient(66.52% 66.52% at 50% 50%, #413446 0%, #0e0d0e 100%);
+/* color */
+
+/* fonts */
+$primaryFont: "Kanit", sans-serif;
+$secondaryFont: "Berkshire Swash", cursive;
+
+$primaryMain: #62768c;
+
+@mixin primary-font {
+    font-family: $primaryFont !important;
+    font-feature-settings: "kern" off, "liga" off !important;
+}
+@mixin secondary-font {
+    font-family: $secondaryFont !important;
+    font-feature-settings: "kern" off, "liga" off !important;
+}
+/* fonts */
+
+/* unit */
+$titleL: 5rem; //80px
+$titleM: 3.125rem; //50px
+$titleS: 1.562rem; //25px
+
+$subtitleL: 1.625rem; //26px
+$subtitleM: 1.5rem; //24px
+$subtitleS: 1.25rem; //20px
+
+$detailL: 1.125rem; //18px
+$detailM: 1rem; //16px
+$detailS: 0.875rem; //14px
+
+$subdetailL: 1.062rem; //17px
+$subdetailM: 0.937rem; //15px
+$subdetailS: 0.875rem; //14px
+
+$logo: 2.25rem; //36px
+
+@mixin normal-text {
+    font-style: normal;
+    font-weight: 400;
+}
+@mixin bold-text {
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin primary-normal-text {
+    @include primary-font;
+    @include normal-text;
+}
+@mixin primary-bold-text {
+    @include primary-font;
+    @include bold-text;
+}
+@mixin secondary-normal-text {
+    @include secondary-font;
+    @include normal-text;
+}
+
+@mixin secondary-bold-text {
+    @include secondary-font;
+    @include bold-text;
+}
+
+// title
+@mixin primary-normal-title-text {
+    @include primary-normal-text;
+    font-size: $titleL;
+    @media (max-width: 767px) {
+        font-size: $titleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $titleM;
+    }
+}
+@mixin primary-bold-title-text {
+    @include primary-bold-text;
+    font-size: $titleL;
+    @media (max-width: 767px) {
+        font-size: $titleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $titleM;
+    }
+}
+
+@mixin secondary-normal-title-text {
+    @include secondary-normal-text;
+    font-size: $titleL;
+    @media (max-width: 767px) {
+        font-size: $titleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $titleM;
+    }
+}
+@mixin secondary-bold-title-text {
+    @include secondary-bold-text;
+    font-size: $titleL;
+    @media (max-width: 767px) {
+        font-size: $titleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $titleM;
+    }
+}
+
+// subtitle
+@mixin primary-normal-subtitle-text {
+    @include primary-normal-text;
+    font-size: $subtitleL;
+    @media (max-width: 767px) {
+        font-size: $subtitleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subtitleM;
+    }
+}
+@mixin primary-bold-subtitle-text {
+    @include primary-bold-text;
+    font-size: $subtitleL;
+    @media (max-width: 767px) {
+        font-size: $subtitleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subtitleM;
+    }
+}
+
+@mixin secondary-normal-subtitle-text {
+    @include secondary-normal-text;
+    font-size: $subtitleL;
+    @media (max-width: 767px) {
+        font-size: $subtitleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subtitleM;
+    }
+}
+@mixin secondary-bold-subtitle-text {
+    @include secondary-bold-text;
+    font-size: $subtitleL;
+    @media (max-width: 767px) {
+        font-size: $subtitleS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subtitleM;
+    }
+}
+
+// detail
+@mixin primary-normal-detail-text {
+    @include primary-normal-text;
+    font-size: $detailL;
+    @media (max-width: 767px) {
+        font-size: $detailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $detailM;
+    }
+}
+@mixin primary-bold-detail-text {
+    @include primary-bold-text;
+    font-size: $detailL;
+    @media (max-width: 767px) {
+        font-size: $detailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $detailM;
+    }
+}
+
+@mixin secondary-normal-detail-text {
+    @include secondary-normal-text;
+    font-size: $detailL;
+    @media (max-width: 767px) {
+        font-size: $detailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $detailM;
+    }
+}
+@mixin secondary-bold-detail-text {
+    @include secondary-bold-text;
+    font-size: $detailL;
+    @media (max-width: 767px) {
+        font-size: $detailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $detailM;
+    }
+}
+
+// subdetail
+@mixin primary-normal-subdetail-text {
+    @include primary-normal-text;
+    font-size: $subdetailL;
+    @media (max-width: 767px) {
+        font-size: $subdetailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subdetailM;
+    }
+}
+@mixin primary-bold-subdetail-text {
+    @include primary-bold-text;
+    font-size: $subdetailL;
+    @media (max-width: 767px) {
+        font-size: $subdetailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subdetailM;
+    }
+}
+
+@mixin secondary-normal-subdetail-text {
+    @include secondary-normal-text;
+    font-size: $subdetailL;
+    @media (max-width: 767px) {
+        font-size: $subdetailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subdetailM;
+    }
+}
+@mixin secondary-bold-subdetail-text {
+    @include secondary-bold-text;
+    font-size: $subdetailL;
+    @media (max-width: 767px) {
+        font-size: $subdetailS;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: $subdetailM;
+    }
+}
+
+/* unit */

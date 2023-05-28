@@ -1,0 +1,14 @@
+.wrap-alert-message {
+    display: flex;
+    align-items: center;
+    background-color: rgba(249, 195, 195, 0.7);
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: #F2085D;
+    font-size: 14px;
+
+    .icon-warning {
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,101 @@
+@import "./variables";
+
+.containerLayerWidget {
+  background-color: $bgPage;
+  border: 1px solid #e5e7eb;
+  width: 550px;
+  min-width: 350px;
+  max-width: 350px;
+
+  .containerHeaderLayerWidget {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+
+  .headerSearch {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+      margin-left: 5px;
+      padding: 0px 5px;
+    }
+
+    .search-layout-widget {
+      width: 75%;
+    }
+  }
+  .boxUploadImage {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    .boxImage {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.5rem;
+
+      overflow-y: scroll;
+      max-height: 50vh;
+
+      &::-webkit-scrollbar,
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      /* IE and Edge */
+      -ms-overflow-style: none;
+      /* Firefox */
+      scrollbar-width: none;
+
+      .image-item {
+        position: relative;
+        background-color: $white;
+        height: fit-content;
+        width: 100%;
+        border-radius: 0.5rem;
+        img {
+          border-radius: 0.5rem;
+          box-shadow: 1px 1px 15px -2.5px rgba($color: $primary, $alpha: 0.5);
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          aspect-ratio: 1/1;
+          object-fit: fill;
+        }
+      }
+    }
+  }
+
+  .cover-total-supply {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    // p {
+    //     font-weight: bold;
+    //     font-size: 14px;
+    // }
+
+    input {
+      border: 1px solid #dfdfdf;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      // margin-right: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      overflow: initial !important;
+    }
+  }
+
+  .scroll-layer-group {
+    // height: calc(100vh - (60px + 76px + 76px));
+    overflow-y: auto;
+  }
+}

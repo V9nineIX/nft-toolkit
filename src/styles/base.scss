@@ -1,0 +1,189 @@
+@import "./variables";
+
+body {
+  margin: 0;
+
+  --primary: #e3b980;
+
+  /* --------- scrolling --------- */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+
+  &::-webkit-scrollbar,
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+  max-height: 100vh;
+  overflow: hidden;
+
+  /* --------- scrolling --------- */
+
+  .shadow {
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 3px solid #0775e3;
+  }
+}
+
+// @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Kanit:ital,wght@0,400;1,700&display=swap");
+
+@font-face {
+  font-family: "Berkshire Swash", cursive;
+  font-style: normal;
+  src: local("Berkshire Swash"), url("../fonts/BerkshireSwash/BerkshireSwash-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kanit"), url("../fonts/Kanit/Kanit-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Kanit"), url("../fonts/Kanit/Kanit-Bold.ttf") format("ttf");
+  font-display: swap;
+}
+
+button,
+a {
+  :hover,
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+button:focus,
+button:focus-visible {
+  box-shadow: none !important;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 40rem #ffff inset !important;
+}
+
+/* --------- isShow --------- */
+.isMobile {
+  width: 100%;
+  display: block !important;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: none !important;
+  }
+  @media (min-width: 1025px) {
+    display: none !important;
+  }
+}
+
+.isDesktop {
+  width: 100%;
+  display: block !important;
+
+  @media (max-width: 480px) {
+    display: none !important;
+  }
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.isVisibilityHidden {
+  visibility: hidden;
+}
+
+/* --------- isShow --------- */
+
+/* --------- validate --------- */
+.textError {
+  @include primary-normal-subdetail-text;
+  color: $error;
+  font-style: italic;
+}
+/* --------- validate --------- */
+
+.textareaWalletAddresses {
+  height: 20vh;
+  padding: 0.5rem 0.875rem;
+  resize: none;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e9eaeb;
+  box-shadow: 1px 1px 8px -0.5px rgba($color: #e9eaeb, $alpha: 0.5);
+}
+
+.box-input-not-label {
+  display: flex;
+  label {
+    display: none;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input {
+    border: 1px solid rgba($color: #6b7280, $alpha: 0.5) !important;
+    padding: 0.75rem;
+
+    &.hasIcon {
+      padding: 0.5rem 0.75rem 0.5rem 2rem !important;
+    }
+  }
+  input:focus {
+    border: 2px solid #6b7280 !important;
+  }
+  > div {
+    min-width: 50px !important;
+    max-width: 200px !important;
+    div {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      transform: translateY(-50%);
+      left: 0.5rem;
+    }
+  }
+}
+.box-textarea-not-label {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  *:focus {
+    border: 2.5px solid #6b7280 !important;
+  }
+}
+
+.box-text-border {
+  label {
+    text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
+  }
+}
+
+.selectVersion {
+  ul {
+    max-height: 140px !important;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.wrap-header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: $bgHeder;
+    color: white;
+    @include primary-bold-subtitle-text;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}

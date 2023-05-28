@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.wrap-side-left-menu {
+    background: #0775e3;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+    max-width: 120px;
+    min-width: 120px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    user-select: none;
+
+    p {
+        color: $white;
+        text-align: center;
+        // text-transform: capitalize;
+        font-size: 13px;
+        word-break: break-word;
+        padding: 1rem 0.5rem;
+        // margin: 5px;
+        // border-radius: 8px;
+        // border: 1px solid rgba($color: $bgDark, $alpha: 0.5);
+        border-bottom: 1px solid rgba($color: $bgDark, $alpha: 0.5);
+
+        &:hover,
+        &:active {
+            cursor: pointer;
+            background: $bgDark;
+            // border-radius: 8px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "../../styles/variables";
+
+.wrap-nav-menu {
+  width: 100%;
+
+  .cover-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+    align-items: center;
+  }
+
+  .btn-generate {
+    margin-right: 10px;
+    .loader {
+      -webkit-animation: spinner 1.5s linear infinite;
+      animation: spinner 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes spinner {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .nav-menu-list {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    span {
+      padding: 15px 10px;
+      margin: 2px 5px;
+      white-space: nowrap;
+
+      &.menu-active {
+        border-bottom: 3px solid #0775e3;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .nav-box-button {
+    // padding-left: 5rem;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .nav-menu-content {
+    width: 100%;
+    height: calc(100vh - (60px + 61px));
+    overflow-y: hidden;
+  }
+}

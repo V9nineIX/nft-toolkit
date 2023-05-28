@@ -1,0 +1,42 @@
+@import "./variables";
+
+.modalAddLayer {
+    .modal-text-title {
+        @include primary-bold-subtitle-text;
+        color: $gray;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        span {
+            margin-top: 0.25rem;
+            @include primary-normal-detail-text;
+        }
+    }
+    .containerAddLayer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .box-image {
+            position: relative;
+            .box-image-square {
+                padding-top: 100%;
+                position: relative;
+                background-image: url("../image/imageEmpty.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

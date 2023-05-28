@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.wrap-modal-select-wallet {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+
+  .cover-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    width: 350px;
+    background-color: $white;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .wallet-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $black;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+
+    .wallet-image {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      color: black;
+    }
+
+    &:hover {
+      color: #0775E3;
+      border-color: #0775E3;
+    }
+  }
+
+  .btn-close {
+    background-color: gray;
+    border: none;
+    padding: 5px 20px;
+    color: $white;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 30%;
+    font-size: 16px;
+  }
+}

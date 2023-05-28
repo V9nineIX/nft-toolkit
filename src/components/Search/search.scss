@@ -1,0 +1,32 @@
+.wrap-search {
+    background: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+    .icon-search {
+        font-size: 22px;
+        padding-left: 10px;
+        color: gray;
+    }
+
+    .icon-clear {
+        font-size: 22px;
+        padding-right: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 10px 15px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
