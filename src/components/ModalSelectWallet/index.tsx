@@ -56,7 +56,7 @@ const ModalSelectWallet = (props: ModalSelectWalletProps) => {
               src={item.image}
               className="wallet-image"
             />
-            <span>{item.name}</span>
+            <span className="wallet-title" >{item.name}</span>
           </div>
         ))}
         <button className={"btn-close"} onClick={() => setIsOpenModal(false)}>
